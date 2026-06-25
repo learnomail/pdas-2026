@@ -1,5 +1,6 @@
 ---
 // src/components/Header.astro
+import { base } from 'astro:config/client';
 import { navLinks } from '../config/navigation.js';
 ---
 
@@ -7,9 +8,9 @@ import { navLinks } from '../config/navigation.js';
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
     
     <div class="flex-shrink-0">
-      <a href="/" class="flex items-center shrink-0 group">
+      <a href={`${base}/`} class="flex items-center shrink-0 group">
         <img 
-          src={'${base}/images/logos/pdas-logo2.png'} 
+          src={`${base}/images/logos/pdas-logo2.png`}
           alt="PDAS 2026" 
           class="h-12 md:h-14 w-auto object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.1)] group-hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.4)] transition-all duration-300"
         />
@@ -46,13 +47,13 @@ import { navLinks } from '../config/navigation.js';
 
     <div class="hidden sm:flex items-center gap-x-4">
       <a 
-        href="/register-visit" 
+        href={`${base}/register-visit`}
         class="text-xs font-bold tracking-wider px-4 py-2.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800 transition-all"
       >
         Visit Registration
       </a>
       <a 
-        href="/exhibit-form" 
+        href={`${base}/exhibit-form`}
         class="text-xs font-bold tracking-wider px-4 py-2.5 rounded-lg bg-gradient-to-r from-blue-700 to-[#008718] text-white shadow-lg shadow-blue-900/30 hover:scale-[1.02] transition-all"
       >
         Exhibit Space Select
