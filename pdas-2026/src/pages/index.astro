@@ -1,4 +1,5 @@
 ---
+import { base } from 'astro:config/client';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -10,7 +11,7 @@ import Layout from '../layouts/Layout.astro';
     <!-- Background Video -->
     <div class="absolute inset-0 z-0">
       <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-60">
-        <source src="/defense-loop.mp4" type="video/mp4" />
+        <source src={`${base}/defense-loop.mp4`} type="video/mp4" />
       </video>
       <!-- subtle technical grid overlay for depth -->
       <div class="absolute inset-0 opacity-[0.05]" style="background-image: linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 48px 48px;"></div>
@@ -145,7 +146,7 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Image Terminal -->
         <div class="relative h-full min-h-[400px] border border-slate-800 rounded-lg p-2 bg-[#020617] shadow-[0_0_60px_-15px_rgba(56,189,248,0.15)]">
-          <img src="/images/home/pdas-aerospace.png" alt="Aerospace Component Manufacturing" class="w-full h-full object-cover rounded-md grayscale opacity-70 mix-blend-luminosity" />
+          <img src={`${base}/images/home/pdas-aerospace.png`} alt="Aerospace Component Manufacturing" class="w-full h-full object-cover rounded-md grayscale opacity-70 mix-blend-luminosity" />
           <div class="absolute top-4 left-4 flex gap-2">
             <div class="w-2 h-2 bg-sky-400 rounded-full animate-pulse"></div>
             <div class="w-2 h-2 bg-slate-700 rounded-full"></div>
@@ -339,7 +340,7 @@ import Layout from '../layouts/Layout.astro';
           <h3 class="text-[11px] text-slate-500 font-mono uppercase tracking-widest mb-8">Organiser</h3>
           <div class="flex justify-center">
             <div class="w-64 h-32 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-6 cursor-default">
-              <img src="/images/logos/peninsula-foundation.png" alt="The Peninsula Foundation" class="max-w-full max-h-full object-contain" />
+              <img src={`${base}/images/logos/peninsula-foundation.png`} alt="The Peninsula Foundation" class="max-w-full max-h-full object-contain" />
             </div>
           </div>
         </div>
@@ -349,15 +350,15 @@ import Layout from '../layouts/Layout.astro';
           <div class="flex flex-wrap justify-center gap-6">
 
             <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
-              <img src="/images/logos/tidco.jpg" alt="TIDCO" class="max-w-full max-h-full object-contain" />
+              <img src={`${base}/images/logos/tidco.jpg`} alt="TIDCO" class="max-w-full max-h-full object-contain" />
             </div>
 
             <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
-              <img src="/images/logos/sicci.png" alt="SICCI" class="max-w-full max-h-full object-contain" />
+              <img src={`${base}/images/logos/sicci.png`} alt="SICCI" class="max-w-full max-h-full object-contain" />
             </div>
 
             <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
-              <img src="/images/logos/itcot.jpg" alt="ITCOT" class="max-w-full max-h-full object-contain" />
+              <img src={`${base}/images/logos/itcot.jpg`} alt="ITCOT" class="max-w-full max-h-full object-contain" />
             </div>
 
           </div>
@@ -368,15 +369,15 @@ import Layout from '../layouts/Layout.astro';
           <div class="flex flex-wrap justify-center gap-6">
 
             <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
-              <img src="/images/logos/aidat.jpeg" alt="AIDAT" class="max-w-full max-h-full object-contain" />
+              <img src={`${base}/images/logos/aidat.jpeg`} alt="AIDAT" class="max-w-full max-h-full object-contain" />
             </div>
 
             <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
-              <img src="/images/logos/iaaa.png" alt="IAAA" class="max-w-full max-h-full object-contain" />
+              <img src={`${base}/images/logos/iaaa.png`} alt="IAAA" class="max-w-full max-h-full object-contain" />
             </div>
 
             <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
-              <img src="/images/logos/aeronautical-logo.jpg" alt="Aeronautical Society of India" class="max-w-full max-h-full object-contain" />
+              <img src={`${base}/images/logos/aeronautical-logo.jpg`} alt="Aeronautical Society of India" class="max-w-full max-h-full object-contain" />
             </div>
 
           </div>
