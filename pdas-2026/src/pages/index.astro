@@ -1,0 +1,456 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="PDAS 2026 | Peninsula Defence & Aerospace Summit">
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-screen flex flex-col justify-center border-b border-slate-800 overflow-hidden">
+
+    <!-- Background Video -->
+    <div class="absolute inset-0 z-0">
+      <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-60">
+        <source src="/defense-loop.mp4" type="video/mp4" />
+      </video>
+      <!-- subtle technical grid overlay for depth -->
+      <div class="absolute inset-0 opacity-[0.05]" style="background-image: linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 48px 48px;"></div>
+      <!-- lighter, directional fade: keeps video visible center-frame, only darkens edges for text legibility -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/35 to-[#020617]/25"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#020617]/70 via-transparent to-[#020617]/30"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-4 md:px-8 relative z-10">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="relative w-2.5 h-2.5 flex items-center justify-center">
+          <span class="absolute inset-0 bg-sky-400 rounded-full animate-ping opacity-60"></span>
+          <span class="relative w-2.5 h-2.5 bg-sky-400 rounded-full block"></span>
+        </span>
+        <p class="text-[11px] uppercase font-mono tracking-[0.2em] text-slate-400">
+          Chennai Trade Centre // 20-22 Nov 2026
+        </p>
+      </div>
+
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-8 drop-shadow-[0_2px_24px_rgba(0,0,0,0.8)] max-w-5xl">
+        Peninsula Defence<br />
+        <span class="text-transparent" style="-webkit-text-stroke: 1px white;">& Aerospace</span><br />
+        Summit 2026
+      </h1>
+
+      <p class="text-slate-300 text-lg md:text-xl max-w-2xl leading-relaxed mb-10 border-l-2 border-sky-400 pl-6">
+        Energising India's Defence Industry. Tamil Nadu and the Indian Peninsula: where military operational need, industrial innovation, and government commitment converge to build India's sovereign, self-reliant, and globally competitive defence ecosystem.
+      </p>
+
+      <div class="flex flex-wrap gap-4 font-mono text-sm uppercase tracking-widest">
+        <a href="/participating-options" class="bg-gradient-to-r from-blue-700 to-[#008718] text-white px-8 py-4 font-bold rounded-lg shadow-lg shadow-blue-900/30 hover:scale-[1.02] transition-all flex items-center gap-3">
+          Register to Exhibit
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/visitor-profile" class="border border-slate-700 text-white px-8 py-4 font-bold rounded-lg hover:border-slate-400 transition-all bg-slate-900/50 backdrop-blur-sm">
+          Register to Visit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN SECTION -->
+  <section class="relative py-20 border-b border-slate-800 bg-[#070d1e] overflow-hidden">
+    <!-- faint grid texture to match the rest of the system -->
+    <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 48px 48px;"></div>
+
+    <div class="container mx-auto px-4 md:px-8 relative z-10">
+      <div class="flex flex-col items-center text-center">
+
+        <div class="flex items-center gap-3 mb-6">
+          <span class="relative w-2 h-2 flex items-center justify-center">
+            <span class="absolute inset-0 bg-sky-400 rounded-full animate-ping opacity-60"></span>
+            <span class="relative w-2 h-2 bg-sky-400 rounded-full block"></span>
+          </span>
+          <p class="text-[11px] uppercase font-mono tracking-[0.3em] text-slate-400">Countdown To The Summit</p>
+        </div>
+
+        <div class="grid grid-cols-4 gap-3 sm:gap-6 md:gap-10 w-full max-w-3xl">
+          <div class="border border-slate-800 bg-slate-900/60 rounded-xl py-6 sm:py-10 px-2">
+            <div id="cd-days" class="text-4xl sm:text-6xl md:text-7xl font-black font-mono tabular-nums text-white leading-none">00</div>
+            <div class="text-[10px] sm:text-xs uppercase tracking-widest text-slate-500 mt-3">Days</div>
+          </div>
+          <div class="border border-slate-800 bg-slate-900/60 rounded-xl py-6 sm:py-10 px-2">
+            <div id="cd-hours" class="text-4xl sm:text-6xl md:text-7xl font-black font-mono tabular-nums text-white leading-none">00</div>
+            <div class="text-[10px] sm:text-xs uppercase tracking-widest text-slate-500 mt-3">Hours</div>
+          </div>
+          <div class="border border-slate-800 bg-slate-900/60 rounded-xl py-6 sm:py-10 px-2">
+            <div id="cd-mins" class="text-4xl sm:text-6xl md:text-7xl font-black font-mono tabular-nums text-white leading-none">00</div>
+            <div class="text-[10px] sm:text-xs uppercase tracking-widest text-slate-500 mt-3">Minutes</div>
+          </div>
+          <div class="border border-sky-400/40 bg-slate-900/60 rounded-xl py-6 sm:py-10 px-2 shadow-[0_0_40px_-10px_rgba(56,189,248,0.35)]">
+            <div id="cd-secs" class="text-4xl sm:text-6xl md:text-7xl font-black font-mono tabular-nums text-sky-400 leading-none">00</div>
+            <div class="text-[10px] sm:text-xs uppercase tracking-widest text-slate-500 mt-3">Seconds</div>
+          </div>
+        </div>
+
+        <p class="text-slate-400 font-mono text-xs uppercase tracking-widest mt-8">
+          20–22 Nov 2026 // Chennai Trade Centre
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS & ABOUT SECTION -->
+  <section class="py-24 border-b border-slate-800">
+    <div class="container mx-auto px-4 md:px-8">
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Content -->
+        <div>
+          <p class="text-sky-400 font-mono text-[10px] uppercase tracking-widest mb-4">01 // Strategic Overview</p>
+          <h2 class="text-3xl md:text-5xl font-bold text-white uppercase tracking-tight mb-6 leading-none">
+            The Engine of Growth
+          </h2>
+          <p class="text-slate-400 leading-relaxed mb-10">
+            A deep base of precision engineering, heavy manufacturing, and aerospace-grade machining gives the region the industrial foundation to scale a self-reliant defence manufacturing base.
+          </p>
+
+          <!-- Core Metric Cards -->
+          <div class="grid grid-cols-2 gap-4 mb-10">
+            <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+              <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Metric.Alpha</span>
+              <h4 class="text-white text-lg font-bold uppercase tracking-wide">Precision Engineering</h4>
+              <div class="w-full h-1 bg-slate-800 rounded-full mt-4 overflow-hidden"><div class="w-3/4 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+            </div>
+
+            <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+              <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Metric.Beta</span>
+              <h4 class="text-white text-lg font-bold uppercase tracking-wide">Heavy Manufacturing</h4>
+              <div class="w-full h-1 bg-slate-800 rounded-full mt-4 overflow-hidden"><div class="w-full h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+            </div>
+
+            <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+              <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Metric.Gamma</span>
+              <h4 class="text-white text-lg font-bold uppercase tracking-wide">Aerospace Components</h4>
+              <div class="w-full h-1 bg-slate-800 rounded-full mt-4 overflow-hidden"><div class="w-5/6 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+            </div>
+
+            <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+              <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Metric.Delta</span>
+              <h4 class="text-white text-lg font-bold uppercase tracking-wide">Advanced Machining</h4>
+              <div class="w-full h-1 bg-slate-800 rounded-full mt-4 overflow-hidden"><div class="w-2/3 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+            </div>
+          </div>
+
+          <a href="/about" class="inline-block border border-slate-700 text-white font-mono text-xs uppercase tracking-widest px-6 py-3 rounded-lg hover:bg-white hover:text-[#020617] transition-colors">
+            Access Full Report
+          </a>
+        </div>
+
+        <!-- Image Terminal -->
+        <div class="relative h-full min-h-[400px] border border-slate-800 rounded-lg p-2 bg-[#020617] shadow-[0_0_60px_-15px_rgba(56,189,248,0.15)]">
+          <img src="/images/home/pdas-aerospace.png" alt="Aerospace Component Manufacturing" class="w-full h-full object-cover rounded-md grayscale opacity-70 mix-blend-luminosity" />
+          <div class="absolute top-4 left-4 flex gap-2">
+            <div class="w-2 h-2 bg-sky-400 rounded-full animate-pulse"></div>
+            <div class="w-2 h-2 bg-slate-700 rounded-full"></div>
+            <div class="w-2 h-2 bg-slate-700 rounded-full"></div>
+          </div>
+          <div class="absolute bottom-4 right-4 bg-slate-900 px-3 py-1 rounded-md border border-slate-800">
+            <span class="text-[10px] font-mono text-sky-400">SYS.CAM // 01 // ACTIVE</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE MARKET INSIGHTS (TABS) -->
+  <section class="py-24 border-b border-slate-800 bg-[#070d1e]">
+    <div class="container mx-auto px-4 md:px-8">
+      <p class="text-sky-400 font-mono text-[10px] uppercase tracking-widest mb-10">02 // Market Intelligence</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+        <!-- Tab Controls -->
+        <div class="lg:col-span-4 flex flex-col gap-2 border-l border-slate-800 pl-4">
+          <button class="tab-btn active text-left px-4 py-4 rounded-lg border border-slate-800 bg-slate-900 text-white font-bold uppercase tracking-wide hover:border-sky-400 transition-colors" data-target="panel-1">
+            Indian Aerospace Market
+          </button>
+          <button class="tab-btn text-left px-4 py-4 rounded-lg border border-slate-800 bg-[#020617] text-slate-500 font-bold uppercase tracking-wide hover:border-sky-400 hover:text-white transition-colors" data-target="panel-2">
+            Government Support
+          </button>
+          <button class="tab-btn text-left px-4 py-4 rounded-lg border border-slate-800 bg-[#020617] text-slate-500 font-bold uppercase tracking-wide hover:border-sky-400 hover:text-white transition-colors" data-target="panel-3">
+            Industry Growth
+          </button>
+        </div>
+
+        <!-- Terminal Output -->
+        <div class="lg:col-span-8 border border-slate-800 rounded-lg bg-[#020617] p-8 relative min-h-[250px] overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-slate-900"><div class="w-1/3 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+
+          <div id="panel-1" class="tab-panel block animate-fade-in">
+            <h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-4">Rapid Ecosystem Expansion</h3>
+            <p class="text-slate-400 leading-relaxed font-mono text-sm">
+              &gt; STATUS: EXPANDING <br><br>
+              India's aerospace and defence sector is experiencing rapid growth driven by modernization of the armed forces, strong government support, and increasing private sector participation. The industry is emerging as one of the fastest-growing defence ecosystems in the world, shifting from import dependency to indigenous capability.
+            </p>
+          </div>
+
+          <div id="panel-2" class="tab-panel hidden animate-fade-in">
+            <h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-4">Policy Reform & Investment</h3>
+            <p class="text-slate-400 leading-relaxed font-mono text-sm">
+              &gt; STATUS: ACTIVE SUPPORT <br><br>
+              The Government of India continues to strengthen the defence sector through increased investment and policy reform aimed at boosting domestic manufacturing and technological capability. Structural changes to procurement policies heavily favor "Make in India" frameworks, derisking investments for MSMEs and major integrators alike.
+            </p>
+          </div>
+
+          <div id="panel-3" class="tab-panel hidden animate-fade-in">
+            <h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-4">Private Sector Integration</h3>
+            <p class="text-slate-400 leading-relaxed font-mono text-sm">
+              &gt; STATUS: ACCELERATING <br><br>
+              The barriers between public research and private manufacturing are dissolving. With aggressive tech-transfer protocols from DRDO and increased joint ventures, the private sector is now taking lead roles in complex systems integration, avionics, and deep-tech warfare solutions.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPANDABLE ACCORDIONS (LISTS) -->
+  <section class="py-24">
+    <div class="container mx-auto px-4 md:px-8">
+
+      <p class="text-sky-400 font-mono text-[10px] uppercase tracking-widest mb-10">03 // Network Demographics</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <!-- Exhibitors Column -->
+        <div>
+          <h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-6">Key Exhibitor Categories</h3>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              Public & Private Integrators
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              &gt; Defence Public Sector Undertakings (DPSUs)<br>
+              &gt; Private defence manufacturers and system integrators<br>
+              &gt; Global aerospace companies and technology providers
+            </div>
+          </details>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              Technology & Research
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              &gt; Academic institutions and research organizations<br>
+              &gt; Electronics and avionics companies<br>
+              &gt; Cybersecurity and AI integration firms
+            </div>
+          </details>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              Operations & Logistics
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              &gt; Maintenance, Repair, Overhaul (MRO)<br>
+              &gt; Logistics service providers<br>
+              &gt; Supply chain management systems
+            </div>
+          </details>
+        </div>
+
+        <!-- Visitors Column -->
+        <div>
+          <h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-6">Key Visitor Categories</h3>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              Government & Military
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              &gt; Representatives from national defence ministries<br>
+              &gt; Officials from state and central government authorities<br>
+              &gt; Official country delegations and diplomats
+            </div>
+          </details>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              Industry Leaders
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              &gt; International and national OEMs<br>
+              &gt; Leaders from the space and geospatial industries<br>
+              &gt; Maritime and shipbuilding industry leaders
+            </div>
+          </details>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              R&D Professionals
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              &gt; Research and development professionals<br>
+              &gt; Chief Technology Officers (CTOs)<br>
+              &gt; Principal Engineers and Systems Architects
+            </div>
+          </details>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INSTITUTIONAL BACKING -->
+  <section class="py-24 border-t border-slate-800 bg-[#020617]">
+    <div class="container mx-auto px-4 md:px-8 max-w-screen-xl">
+
+      <div class="flex items-center justify-center gap-4 mb-16">
+        <span class="w-full h-px bg-slate-800"></span>
+        <p class="text-sky-400 font-mono text-[10px] uppercase tracking-[0.3em] whitespace-nowrap px-4">
+          Sys.Network // Institutional Backing
+        </p>
+        <span class="w-full h-px bg-slate-800"></span>
+      </div>
+
+      <div class="space-y-20 text-center">
+
+        <div>
+          <h3 class="text-[11px] text-slate-500 font-mono uppercase tracking-widest mb-8">Organiser</h3>
+          <div class="flex justify-center">
+            <div class="w-64 h-32 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-6 cursor-default">
+              <img src="/images/logos/peninsula-foundation.png" alt="The Peninsula Foundation" class="max-w-full max-h-full object-contain" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-[11px] text-slate-500 font-mono uppercase tracking-widest mb-8">Supporting Associations</h3>
+          <div class="flex flex-wrap justify-center gap-6">
+
+            <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
+              <img src="/images/logos/tidco.jpg" alt="TIDCO" class="max-w-full max-h-full object-contain" />
+            </div>
+
+            <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
+              <img src="/images/logos/sicci.png" alt="SICCI" class="max-w-full max-h-full object-contain" />
+            </div>
+
+            <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
+              <img src="/images/logos/itcot.jpg" alt="ITCOT" class="max-w-full max-h-full object-contain" />
+            </div>
+
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-[11px] text-slate-500 font-mono uppercase tracking-widest mb-8">Professional Bodies</h3>
+          <div class="flex flex-wrap justify-center gap-6">
+
+            <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
+              <img src="/images/logos/aidat.jpeg" alt="AIDAT" class="max-w-full max-h-full object-contain" />
+            </div>
+
+            <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
+              <img src="/images/logos/iaaa.png" alt="IAAA" class="max-w-full max-h-full object-contain" />
+            </div>
+
+            <div class="w-48 h-24 border border-slate-800 rounded-lg bg-white flex items-center justify-center p-4 cursor-default">
+              <img src="/images/logos/aeronautical-logo.jpg" alt="Aeronautical Society of India" class="max-w-full max-h-full object-contain" />
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<!-- Client-side Logic for Tabs + Countdown -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Reset all buttons
+        tabBtns.forEach(b => {
+          b.classList.remove('bg-slate-900', 'text-white', 'border-sky-400');
+          b.classList.add('bg-[#020617]', 'text-slate-500');
+        });
+
+        // Hide all panels
+        tabPanels.forEach(p => p.classList.add('hidden'));
+
+        // Activate clicked button
+        btn.classList.remove('bg-[#020617]', 'text-slate-500');
+        btn.classList.add('bg-slate-900', 'text-white', 'border-sky-400');
+
+        // Show corresponding panel
+        const targetId = btn.getAttribute('data-target');
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+          targetPanel.classList.remove('hidden');
+        }
+      });
+    });
+
+    // Countdown timer — ticks live from page load to the summit date (20 Nov 2026, IST)
+    const eventDate = new Date("2026-11-20T00:00:00+05:30").getTime();
+    const daysEl = document.getElementById('cd-days');
+    const hoursEl = document.getElementById('cd-hours');
+    const minsEl = document.getElementById('cd-mins');
+    const secsEl = document.getElementById('cd-secs');
+    const pad = (n) => String(n).padStart(2, '0');
+
+    function updateCountdown() {
+      const diff = Math.max(0, eventDate - Date.now());
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      if (daysEl) daysEl.textContent = pad(days);
+      if (hoursEl) hoursEl.textContent = pad(hours);
+      if (minsEl) minsEl.textContent = pad(mins);
+      if (secsEl) secsEl.textContent = pad(secs);
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  });
+</script>
+
+<style>
+  /* Simple fade animation for tab transitions */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

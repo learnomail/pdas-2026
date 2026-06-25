@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About TPF | PDAS 2026">
+  <section class="bg-[#020617] pt-12 pb-24 px-4 md:px-8 border-b border-slate-800 relative overflow-hidden">
+    <!-- Faint grid backdrop texture for technical styling continuity -->
+    <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 48px 48px;"></div>
+
+    <div class="max-w-screen-xl mx-auto relative z-10">
+      
+      <!-- DATA HEADER -->
+      <div class="border-b border-slate-800 pb-8 mb-12">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="relative w-2.5 h-2.5 flex items-center justify-center">
+            <span class="absolute inset-0 bg-sky-400 rounded-full animate-ping opacity-60"></span>
+            <span class="relative w-2.5 h-2.5 bg-sky-400 rounded-full block"></span>
+          </span>
+          <p class="text-[11px] uppercase font-mono tracking-[0.2em] text-slate-400">
+            SYS.DIR // ORGANISERS // ABOUT TPF
+          </p>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
+          About The Peninsula Foundation
+        </h1>
+      </div>
+
+      <!-- CONTENT BODY -->
+      <div class="space-y-16">
+        
+        <!-- Hero Text Block -->
+        <p class="text-xl md:text-2xl text-slate-300 font-medium leading-relaxed max-w-4xl border-l-2 border-sky-400 pl-6">
+          The Peninsula Foundation (TPF) is an independent, non-partisan public policy institution based in Chennai, India, advancing research, dialogue, and strategic thought across governance, security, and global affairs.
+        </p>
+
+        <!-- Two Column Intro -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-slate-800 pt-12">
+          <div>
+            <h2 class="text-[11px] text-slate-500 uppercase font-mono tracking-widest font-bold mb-4">01 // Who We Are</h2>
+            <p class="text-slate-400 text-base leading-relaxed">
+              TPF is a collective of scholars, practitioners, and civic leaders working at the intersection of geopolitics, governance reform, technology, and social justice. It is not just a think tank—but a platform shaping ideas into action.
+            </p>
+          </div>
+          <div>
+            <h2 class="text-[11px] text-slate-500 uppercase font-mono tracking-widest font-bold mb-4">02 // Our Foundation</h2>
+            <p class="text-slate-400 text-base leading-relaxed">
+              Rooted in India’s civilisational wisdom and guided by global realities, TPF promotes ethical leadership, inclusive development, and a just international order.
+            </p>
+          </div>
+        </div>
+
+        <!-- Vision & Mission -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-xl transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80">
+            <h3 class="text-2xl font-black text-white uppercase tracking-tight mb-4">Vision</h3>
+            <p class="text-slate-400 mb-6">India’s rise as a moral civilisation driven by ethical innovation, democracy, and universal kinship.</p>
+            <blockquote class="border-l-2 border-sky-400 pl-4 my-6">
+              <p class="text-white font-mono text-sm">“Yaadhum Oorey, Yavarum Kelir”</p>
+              <p class="text-slate-500 text-xs uppercase tracking-widest mt-2">Every place is home, everyone is kin</p>
+            </blockquote>
+            <p class="text-slate-400">A world where justice, cooperation, and multipolar balance define global relations.</p>
+          </div>
+
+          <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-xl transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80">
+            <h3 class="text-2xl font-black text-white uppercase tracking-tight mb-4">Mission</h3>
+            <p class="text-slate-400 mb-4">To develop and promote evidence-based public policies grounded in liberty, equality, economic freedom, and national security.</p>
+            <p class="text-slate-400">Through collaboration across policy, academia, and society, TPF builds resilient and forward-looking solutions.</p>
+          </div>
+        </div>
+
+        <!-- What We Do (Timeline/Grid) -->
+        <div class="border-t border-slate-800 pt-12">
+          <h2 class="text-3xl font-black text-white uppercase tracking-tight mb-8">What We Do</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="border border-slate-800 bg-slate-900/30 p-6 rounded-lg transition-all duration-300 hover:border-sky-400/40 hover:bg-slate-900/60">
+              <span class="block text-sky-400 font-mono text-lg mb-4">01</span>
+              <h4 class="text-white font-bold uppercase mb-2 text-sm tracking-wide">Research & Policy</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Data-driven insights on governance, security, and global affairs.</p>
+            </div>
+            <div class="border border-slate-800 bg-slate-900/30 p-6 rounded-lg transition-all duration-300 hover:border-sky-400/40 hover:bg-slate-900/60">
+              <span class="block text-sky-400 font-mono text-lg mb-4">02</span>
+              <h4 class="text-white font-bold uppercase mb-2 text-sm tracking-wide">Dialogue & Engagement</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">High-level forums, conferences, and public discussions.</p>
+            </div>
+            <div class="border border-slate-800 bg-slate-900/30 p-6 rounded-lg transition-all duration-300 hover:border-sky-400/40 hover:bg-slate-900/60">
+              <span class="block text-sky-400 font-mono text-lg mb-4">03</span>
+              <h4 class="text-white font-bold uppercase mb-2 text-sm tracking-wide">Strategic Foresight</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Future-focused analysis of geopolitical and technological shifts.</p>
+            </div>
+            <div class="border border-slate-800 bg-slate-900/30 p-6 rounded-lg transition-all duration-300 hover:border-sky-400/40 hover:bg-slate-900/60">
+              <span class="block text-sky-400 font-mono text-lg mb-4">04</span>
+              <h4 class="text-white font-bold uppercase mb-2 text-sm tracking-wide">Governance Reform</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Frameworks for transparency, accountability, and structural change.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Focus Areas -->
+        <div class="border-t border-slate-800 pt-12">
+          <h2 class="text-3xl font-black text-white uppercase tracking-tight mb-8">Focus Areas</h2>
+          <div class="flex flex-wrap gap-4">
+            <span class="px-4 py-2.5 border border-slate-800 bg-[#070d1e] text-slate-300 text-xs font-mono uppercase tracking-wider rounded-md transition-colors hover:border-sky-400/40 hover:text-white cursor-default">Democracy & Governance</span>
+            <span class="px-4 py-2.5 border border-slate-800 bg-[#070d1e] text-slate-300 text-xs font-mono uppercase tracking-wider rounded-md transition-colors hover:border-sky-400/40 hover:text-white cursor-default">Science & Technology</span>
+            <span class="px-4 py-2.5 border border-slate-800 bg-[#070d1e] text-slate-300 text-xs font-mono uppercase tracking-wider rounded-md transition-colors hover:border-sky-400/40 hover:text-white cursor-default">International Affairs</span>
+            <span class="px-4 py-2.5 border border-slate-800 bg-[#070d1e] text-slate-300 text-xs font-mono uppercase tracking-wider rounded-md transition-colors hover:border-sky-400/40 hover:text-white cursor-default">Security & Strategy</span>
+          </div>
+        </div>
+
+        <!-- Ethos -->
+        <div class="border-t border-slate-800 pt-12">
+          <h2 class="text-3xl font-black text-white uppercase tracking-tight mb-6">Institutional Ethos</h2>
+          <p class="text-slate-400 text-base leading-relaxed max-w-3xl">
+            TPF operates with complete independence and neutrality. It does not represent political or corporate interests. Its mission is solely to elevate public policy discourse and strengthen democratic institutions.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Participating Options | PDAS 2026">
+  <section class="bg-[#020617] pt-12 pb-24 px-4 md:px-8 border-b border-slate-800">
+    <div class="max-w-screen-xl mx-auto">
+      
+      <!-- DATA HEADER -->
+      <div class="border-b border-slate-800 pb-8 mb-12">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="relative w-2.5 h-2.5 flex items-center justify-center">
+            <span class="absolute inset-0 bg-sky-400 rounded-full animate-ping opacity-60"></span>
+            <span class="relative w-2.5 h-2.5 bg-sky-400 rounded-full block"></span>
+          </span>
+          <p class="text-[11px] uppercase font-mono tracking-[0.2em] text-slate-400">
+            SYS.DIR // COMMERCE // PARTICIPATING OPTIONS
+          </p>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
+          Participating Options
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-slate-400 leading-relaxed max-w-3xl">
+          PDAS 2026 offers flexible participation options for exhibitors and partners to showcase their products, technologies, and capabilities.
+        </p>
+      </div>
+
+      <!-- OPTIONS GRID -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <!-- Option 1 -->
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg flex flex-col group overflow-hidden transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-1">
+          <div class="h-48 bg-[#020617] overflow-hidden relative border-b border-slate-800 p-2">
+            <img src="/images/hall/bare-space.jpg" alt="Bare Space" class="w-full h-full object-cover rounded-sm grayscale opacity-60 mix-blend-luminosity group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500 scale-105 group-hover:scale-100" />
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-sky-400 font-mono text-[10px] uppercase tracking-widest mb-3">Protocol 01</span>
+            <h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-4">Bare Space</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-8">
+              Exhibitors can book bare exhibition space and design their stalls according to their branding and display requirements.
+            </p>
+            <p class="text-slate-500 text-xs font-mono mt-auto border-t border-slate-800 pt-4">
+              * All stall designs must be approved by the event organisers prior to installation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Option 2 -->
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg flex flex-col group overflow-hidden transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-1">
+          <div class="h-48 bg-[#020617] overflow-hidden relative border-b border-slate-800 p-2">
+            <img src="/images/hall/built-up-octonorm-stall.jpg" alt="Built-Up Octonorm Stall" class="w-full h-full object-cover rounded-sm grayscale opacity-60 mix-blend-luminosity group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500 scale-105 group-hover:scale-100" />
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-sky-400 font-mono text-[10px] uppercase tracking-widest mb-3">Protocol 02</span>
+            <h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-4">Built-Up Octonorm Stall</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              A ready-to-use standard stall setup will be provided for exhibitors who prefer a convenient turnkey solution.
+            </p>
+            <div class="mt-auto border-t border-slate-800 pt-4">
+              <h4 class="text-white text-[11px] font-mono uppercase tracking-wider mb-2">The package includes:</h4>
+              <p class="text-slate-500 text-xs font-mono leading-relaxed">
+                Octonorm wall panels, Carpet flooring, Fascia board with company name, spotlight, power socket, counter, chairs, table, electricity and cleaning service.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Option 3 -->
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg flex flex-col group overflow-hidden transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-1">
+          <div class="h-48 bg-[#020617] overflow-hidden relative border-b border-slate-800 p-2">
+            <img src="/images/hall/sponsorship-opportunities.jpg" alt="Sponsorship Opportunities" class="w-full h-full object-cover rounded-sm grayscale opacity-60 mix-blend-luminosity group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500 scale-105 group-hover:scale-100" />
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-sky-400 font-mono text-[10px] uppercase tracking-widest mb-3">Protocol 03</span>
+            <h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-4">Sponsorship Opportunities</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Organisations can enhance their visibility and brand positioning through customised sponsorship packages with premium exposure and networking access.
+            </p>
+            <div class="mt-auto border-t border-slate-800 pt-4">
+               <a href="/contact" class="text-sky-400 text-xs font-mono uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2">
+                 Enquire Now <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+               </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</Layout>

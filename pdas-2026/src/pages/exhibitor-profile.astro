@@ -1,0 +1,263 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Exhibitor Profile | PDAS 2026">
+
+  <!-- PAGE HERO -->
+  <section class="relative min-h-[55vh] flex flex-col justify-end border-b border-slate-800 overflow-hidden pb-16">
+    <div class="absolute inset-0 opacity-[0.05]" style="background-image: linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 48px 48px;"></div>
+    <div class="absolute inset-0 bg-[#020617]"></div>
+
+    <div class="container mx-auto px-4 md:px-8 relative z-10 pt-32">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="relative w-2.5 h-2.5 flex items-center justify-center">
+          <span class="absolute inset-0 bg-sky-400 rounded-full animate-ping opacity-60"></span>
+          <span class="relative w-2.5 h-2.5 bg-sky-400 rounded-full block"></span>
+        </span>
+        <p class="text-[11px] uppercase font-mono tracking-[0.2em] text-slate-400">
+          SYS.DIR // Roster // Exhibitor Profile
+        </p>
+      </div>
+
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-8">
+        Exhibitor<br />
+        <span class="text-transparent" style="-webkit-text-stroke: 1px white;">Profile</span>
+      </h1>
+
+      <p class="text-slate-300 text-lg md:text-xl max-w-2xl leading-relaxed border-l-2 border-sky-400 pl-6">
+        PDAS 2026 hosts the full spectrum of India's aerospace, defence, and advanced technology ecosystem — from DPSUs and global OEMs to deep-tech startups and research institutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXHIBITOR CATEGORIES GRID -->
+  <section class="py-24 border-b border-slate-800">
+    <div class="container mx-auto px-4 md:px-8">
+
+      <p class="text-sky-400 font-mono text-[10px] uppercase tracking-widest mb-10">01 // Key Exhibitor Categories</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.01</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">Defence Public Sector Undertakings (DPSUs)</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-full h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.02</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">DRDO and Affiliated R&D Laboratories</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-5/6 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.03</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">MSMEs & Start-ups in Aerospace, AI, and Defence Innovation</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-3/4 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.04</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">Private Defence Manufacturers and System Integrators</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-full h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.05</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">Engineering & Manufacturing (CNC, Forging, Precision)</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-4/5 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.06</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">Electronics and Avionics Companies</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-2/3 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.07</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">MRO and Logistics Service Providers</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-3/4 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.08</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">Academic Institutions and Research Organizations</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-1/2 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.09</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">Global Aerospace Companies and Technology Providers</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-full h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.10</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">AI and Robotics Technology Providers</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-5/6 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.11</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">Advanced Materials and Composite Manufacturers</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-3/4 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.12</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">Cybersecurity Firms for Defence Applications</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-2/3 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.13</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">UAV and Autonomous Systems Companies</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-4/5 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.14</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">Defence Contractors and Integration Firms</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-full h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+        <div class="border border-slate-800 bg-slate-900/50 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80 hover:-translate-y-0.5">
+          <span class="text-sky-400 font-mono text-[10px] uppercase mb-4">Cat.15</span>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wide">Financial Institutions and Export Promotion Agencies</h4>
+          <div class="w-full h-px bg-slate-800 rounded-full mt-6 overflow-hidden"><div class="w-1/2 h-full bg-gradient-to-r from-blue-700 to-[#008718]"></div></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXHIBITOR ACCORDION — grouped view -->
+  <section class="py-24 border-b border-slate-800 bg-[#070d1e]">
+    <div class="container mx-auto px-4 md:px-8">
+
+      <p class="text-sky-400 font-mono text-[10px] uppercase tracking-widest mb-10">02 // Category Groups</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-6">Industry & Manufacturing</h3>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              Public & Private Integrators
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              > Defence Public Sector Undertakings (DPSUs)<br>
+              > Private defence manufacturers and system integrators<br>
+              > Global aerospace companies and technology providers
+            </div>
+          </details>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              Precision & Advanced Manufacturing
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              > CNC, forging, and precision engineering companies<br>
+              > Advanced materials and composite manufacturers<br>
+              > MRO and logistics service providers
+            </div>
+          </details>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              Financial & Trade Enablers
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              > Financial institutions supporting defence ventures<br>
+              > Export promotion agencies<br>
+              > Defence procurement advisory firms
+            </div>
+          </details>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-6">Technology & Research</h3>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              Deep Technology
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              > AI and robotics technology providers<br>
+              > UAV and autonomous systems companies<br>
+              > Cybersecurity firms for defence applications<br>
+              > Electronics and avionics companies
+            </div>
+          </details>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              R&D Institutions
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              > DRDO and affiliated laboratories<br>
+              > Academic institutions and research organizations<br>
+              > MSMEs and start-ups in aerospace and defence innovation
+            </div>
+          </details>
+
+          <details class="group border border-slate-800 bg-slate-900 rounded-lg mb-2 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-colors hover:border-slate-700">
+            <summary class="flex items-center justify-between p-4 text-white font-bold uppercase text-sm list-none">
+              Systems & Integration
+              <span class="transition group-open:rotate-180 text-sky-400">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div class="p-4 pt-0 border-t border-slate-800 mt-2 text-slate-400 text-sm font-mono leading-relaxed">
+              > Defence contractors and integration firms<br>
+              > Command and control system providers<br>
+              > Electronic warfare platform developers
+            </div>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-[#020617]">
+    <div class="container mx-auto px-4 md:px-8 text-center">
+      <p class="text-sky-400 font-mono text-[10px] uppercase tracking-widest mb-6">03 // Secure Your Space</p>
+      <h2 class="text-3xl md:text-5xl font-bold text-white uppercase tracking-tight mb-6 leading-none">
+        Exhibit at PDAS 2026
+      </h2>
+      <p class="text-slate-400 max-w-xl mx-auto leading-relaxed mb-10 border-l-2 border-sky-400 pl-6 text-left">
+        Secure your platform at India's premier defence and aerospace summit. Connect with government buyers, global OEMs, and the full industrial ecosystem of the Indian Peninsula.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 font-mono text-sm uppercase tracking-widest">
+        <a href="/participating-options" class="bg-gradient-to-r from-blue-700 to-[#008718] text-white px-8 py-4 font-bold rounded-lg shadow-lg shadow-blue-900/30 hover:scale-[1.02] transition-all flex items-center gap-3">
+          Register to Exhibit
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/contact" class="border border-slate-700 text-white px-8 py-4 font-bold rounded-lg hover:border-slate-400 transition-all bg-slate-900/50 backdrop-blur-sm">
+          Contact the Team
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

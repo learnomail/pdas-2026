@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const steeringCommittee = [
+  { name: "Air Marshal M Matheswaran AVSM VM PhD (V)", role: "TPF Chairman & President", image: "/images/committee/air-marshal-m-matheswaran.png" },
+  { name: "Mr. Hansraj Verma, IAS (retd.)", role: "Director General, COSIDICI", image: "/images/committee/hansraj-verma.png" },
+  { name: "Lt. Gen. P N Anantha Narayanan AVSM SM (V)", role: "Summit Director", image: "/images/committee/lt-gen-p-n-anantha-narayanan.png" },
+  { name: "Air Chief Marshal Rakesh Kumar Singh Bhadauria PVSM AVSM VM ADC (V)", image: "/images/committee/rakesh-kumar-singh-bhadauria.png" },
+  { name: "Lt. Gen. Karanbir Singh Brar AVSM SM", image: "/images/committee/lt-gen-karanbir-singh-brar.png" },
+  { name: "Air Vice Marshal Kapil Kak AVSM VSM (V)", image: "/images/committee/kapil-kak.png" },
+  { name: "Dr S Rammohan PhD I.R.S. (Retd.)", image: "/images/committee/dr-s-rammohan.png" },
+  { name: "Mr. R. Ravichandran I.R.S. (Retd.)", image: "/images/committee/mr-r-ravichandran.png" },
+  { name: "Dr. Ravindra Kumar (R.K.) Tyagi", role: "Former CMD, HAL", image: "/images/committee/dr-ravindra-kumar.png" },
+  { name: "Mr. Ramachandran Natarajan", role: "MEL Systems and Services Ltd", image: "/images/committee/mr-ramachandran.png" },
+  { name: "Vice Admiral Shekhar Sinha, PVSM, AVSM, NM & Bar, ADC(V)", image: "/images/committee/vice-admira-shekhar-sinha.png" },
+  { name: "Captain Swarup Bangara", role: "Maritime Consultant", image: "/images/committee/captain-swarup-bangara.png" }
+];
+
+const execCommittee = [
+  { name: "Lt. Gen. P N Anantha Narayanan AVSM SM (V)", role: "Summit Director", image: "/images/committee/lt-gen-p-n-anantha-narayanan.png" },
+  { name: "Gp Capt M J Augustine Vinod(V)", role: "Amos Aerospace", image: "/images/committee/mr-augustine-vinod.png" },
+  { name: "Prof. Karunakaran", role: "IAAA Foundation", image: "/images/committee/prof-karunakaran.png" },
+  { name: "Air Cmd. J Mathappan(V)", image: "/images/committee/air-cmd-j-mathappan.png" },
+  { name: "Commodore Mukesh Bhargava (V)", role:"Former VP & Board Member, L&T Defense", image: "/images/committee/mukesh-bhargava.png" },
+  { name: "Professor P M Soundar Rajan", image: "/images/committee/professor-soundar-rajan.png" },
+  { name: "Wing Commander K.T. Sebastian (V)", image: "/images/committee/wing-commander-k-t-sebastian.png" },
+  { name: "Mr Sai Pattabiram", role: "Zuppa Geo Navigation Technologies Pvt Ltd", image: "/images/committee/mr-sai-pattabiram.png" },
+  { name: "Ms. Uma Meiyappan", role: "Iyyappan Engineering Industries Pvt Ltd", image: "/images/committee/ms-uma-meiyappan.png" },
+  { name: "Dr. Vijay Sakhuja PhD", image: "/images/committee/dr-vijay-sakhuja.png" },
+  { name: "Mr. K R Ramamoorthi", role: "TPF Director - Operations", image: "/images/committee/mr-k-r-rammoorthi.png" },
+  { name: "Mr. I Marshall Anto", role: "TPF Research Associate", image: "/images/committee/mr-marshall-anto.png" },
+  { name: "Ms. A Anupama", role:"TPF Research Assistant", image: "/images/committee/ms-a-anupama.png" }
+];
+
+const financeCommittee = [
+  { name: "Air Marshal M Matheswaran AVSM VM PhD(V)", role: "TPF Chairman & President", image: "/images/committee/air-marshal-m-matheswaran.png" },
+  { name: "Dr. S Rammohan PhD IRS (Retd)", image: "/images/committee/dr-s-rammohan.png" },
+  { name: "Wing Commander K.T. Sebastian (V)", image: "/images/committee/wing-commander-k-t-sebastian.png" },
+  { name: "Mr. Mohan Krishna Reddy", role: "Banyan Advisory", image: "/images/committee/mr-mohan-krishna-reddy.png" },
+  { name: "Mr. K R Rammoorthi", role: "TPF Director - Operations", image: "/images/committee/mr-k-r-rammoorthi.png" },
+  { name: "Mr. I Marshall Anto", role: "TPF Research Associate", image: "/images/committee/mr-marshall-anto.png" }
+];
+---
+
+<Layout title="PDAS Organisation | PDAS 2026">
+  <section class="bg-[#070d1e] pt-12 pb-24 px-4 md:px-8 border-b border-slate-800 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 48px 48px;"></div>
+    
+    <div class="max-w-screen-xl mx-auto relative z-10">
+      
+      <div class="border-b border-slate-800 pb-8 mb-16">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="relative w-2.5 h-2.5 flex items-center justify-center">
+            <span class="absolute inset-0 bg-sky-400 rounded-full animate-ping opacity-60"></span>
+            <span class="relative w-2.5 h-2.5 bg-sky-400 rounded-full block"></span>
+          </span>
+          <p class="text-[11px] uppercase font-mono tracking-[0.2em] text-slate-400">
+            SYS.DIR // ORGANISERS // PDAS ORGANISATION
+          </p>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
+          PDAS Organisation
+        </h1>
+      </div>
+
+      <div class="space-y-24">
+        
+        <div>
+          <div class="mb-10 border-l-2 border-sky-400 pl-4">
+            <h2 class="text-3xl font-bold text-white uppercase tracking-tight">Steering Committee</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {steeringCommittee.map((member) => (
+              <div class="border border-slate-800 bg-slate-900/50 rounded-lg flex flex-col group overflow-hidden transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80">
+                <div class="aspect-square bg-[#020617] border-b border-slate-800 overflow-hidden relative p-1">
+                  <img src={member.image} alt={member.name} class="w-full h-full object-cover rounded-md grayscale opacity-70 mix-blend-luminosity group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500" />
+                </div>
+                <div class="p-5 flex-grow flex flex-col justify-center">
+                  <h3 class="text-sm font-bold text-white uppercase leading-snug tracking-wide">{member.name}</h3>
+                  <p class="text-[11px] text-sky-400 font-mono mt-1.5 uppercase tracking-wide leading-relaxed">{member.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-10 border-l-2 border-sky-400 pl-4">
+            <h2 class="text-3xl font-bold text-white uppercase tracking-tight">Executive Committee</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {execCommittee.map((member) => (
+              <div class="border border-slate-800 bg-slate-900/50 rounded-lg flex flex-col group overflow-hidden transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80">
+                <div class="aspect-square bg-[#020617] border-b border-slate-800 overflow-hidden relative p-1">
+                  <img src={member.image} alt={member.name} class="w-full h-full object-cover rounded-md grayscale opacity-70 mix-blend-luminosity group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500" />
+                </div>
+                <div class="p-5 flex-grow flex flex-col justify-center">
+                  <h3 class="text-sm font-bold text-white uppercase leading-snug tracking-wide">{member.name}</h3>
+                  <p class="text-[11px] text-sky-400 font-mono mt-1.5 uppercase tracking-wide leading-relaxed">{member.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-10 border-l-2 border-sky-400 pl-4">
+            <h2 class="text-3xl font-bold text-white uppercase tracking-tight">Financial Committee</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {financeCommittee.map((member) => (
+              <div class="border border-slate-800 bg-slate-900/50 rounded-lg flex flex-col group overflow-hidden transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/80">
+                <div class="aspect-square bg-[#020617] border-b border-slate-800 overflow-hidden relative p-1">
+                  <img src={member.image} alt={member.name} class="w-full h-full object-cover rounded-md grayscale opacity-70 mix-blend-luminosity group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500" />
+                </div>
+                <div class="p-5 flex-grow flex flex-col justify-center">
+                  <h3 class="text-sm font-bold text-white uppercase leading-snug tracking-wide">{member.name}</h3>
+                  <p class="text-[11px] text-sky-400 font-mono mt-1.5 uppercase tracking-wide leading-relaxed">{member.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>
