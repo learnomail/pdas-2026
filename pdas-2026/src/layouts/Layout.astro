@@ -1,5 +1,6 @@
 ---
 // src/layouts/Layout.astro
+import { base } from 'astro:config/client';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 
@@ -11,7 +12,7 @@ const { title = "PDAS 2026 - Peninsula Defence & Aerospace Summit" } = Astro.pro
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href={`${base}/favicon.svg`} type="image/x-icon" />
     <title>{title}</title>
   </head>
   <body class="bg-[#020617] text-slate-100 font-sans subpixel-antialiased selection:bg-[#008718] selection:text-white min-h-screen flex flex-col">
@@ -36,7 +37,7 @@ const { title = "PDAS 2026 - Peninsula Defence & Aerospace Summit" } = Astro.pro
               PDAS 2026 is organised by The Peninsula Foundation(TPF), based in Chennai. PDAS 2026 is envisioned as a strategic platform to support the Government of India's efforts to build,sustain, strengthen, and accelerate the country's defence and aerospace industrial ecosystem.
             </p>
             <div class="pt-2">
-              <a href="/about" class="inline-block border border-slate-700 text-white font-mono text-[11px] uppercase tracking-widest px-5 py-2.5 rounded hover:bg-white hover:text-[#020617] hover:border-white transition-all">
+              <a href={`${base}/about`} class="inline-block border border-slate-700 text-white font-mono text-[11px] uppercase tracking-widest px-5 py-2.5 rounded hover:bg-white hover:text-[#020617] hover:border-white transition-all">
                 Read More
               </a>
             </div>
@@ -48,22 +49,22 @@ const { title = "PDAS 2026 - Peninsula Defence & Aerospace Summit" } = Astro.pro
             </h3>
             <ul class="space-y-3 font-mono text-xs uppercase tracking-wider">
               <li>
-                <a href="/exhibitor-profile" class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Exhibitor Profile</a>
+                <a href={`${base}/exhibitor-profile`} class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Exhibitor Profile</a>
               </li>
               <li>
-                <a href="/visitor-profile" class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Visitor Profile</a>
+                <a href={`${base}/visitor-profile`} class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Visitor Profile</a>
               </li>
               <li>
-                <a href="/who-should-participate" class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Who Should Participate</a>
+                <a href={`${base}/who-should-participate`} class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Who Should Participate</a>
               </li>
               <li>
-                <a href="/why-to-participate" class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Why To Participate</a>
+                <a href={`${base}/why-to-participate`} class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Why To Participate</a>
               </li>
               <li>
-                <a href="/participating-options" class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Participating Options</a>
+                <a href={`${base}/participating-options`} class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Participating Options</a>
               </li>
               <li>
-                <a href="/strategic-panel-discussions" class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Highlights of PDAS 2026</a>
+                <a href={`${base}/strategic-panel-discussions`} class="text-slate-400 hover:text-sky-400 transition-colors block py-0.5">Highlights of PDAS 2026</a>
               </li>
             </ul>
           </div>
@@ -109,10 +110,10 @@ const { title = "PDAS 2026 - Peninsula Defence & Aerospace Summit" } = Astro.pro
                 Conference Contact
               </h3>
               <div class="flex flex-wrap gap-3 font-mono text-xs uppercase tracking-widest">
-                <a href="/visitor-profile" class="bg-[#008718] hover:bg-[#006e14] text-white px-5 py-3 font-bold rounded transition-colors duration-200">
+                <a href={`${base}/visitor-profile`} class="bg-[#008718] hover:bg-[#006e14] text-white px-5 py-3 font-bold rounded transition-colors duration-200">
                   Register to Visit
                 </a>
-                <a href="/participating-options" class="bg-[#008718] hover:bg-[#006e14] text-white px-5 py-3 font-bold rounded transition-colors duration-200">
+                <a href={`${base}/participating-options`} class="bg-[#008718] hover:bg-[#006e14] text-white px-5 py-3 font-bold rounded transition-colors duration-200">
                   Register to Exhibit
                 </a>
               </div>
