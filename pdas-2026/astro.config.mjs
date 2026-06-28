@@ -1,12 +1,10 @@
-// @ts-check
+// astro.config.mjs
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://learnomail.github.io',
-  base: '/pdas-2026',
-
+  site: 'https://pdas.org.in', // Your new production domain
+  
   vite: {
     plugins: [tailwindcss()]
   }

@@ -1,44 +1,44 @@
 ---
 // src/components/Header.astro
-import { base } from 'astro:config/client';
 import { navLinks } from '../config/navigation.js';
+
+const logos = [
+  "/images/logos/tnbg.webp",
+  "/images/logos/tidcobg.png",
+  "/images/logos/itcotbg.png",
+  "/images/logos/peninsulabg.png",
+];
 ---
 
-<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#020617]/70 border-b border-slate-800/80 transition-all duration-300">
+<div id="logo-bar" class="w-full bg-white border-b border-slate-200 relative z-[60]">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-center gap-6 md:gap-12">
+    {logos.map((logo) => (
+      <img src={logo} alt="Partner Logo" class="h-8 md:h-12 w-auto object-contain" />
+    ))}
+  </div>
+</div>
+
+<header id="main-header" class="sticky top-0 left-0 w-full z-[100] backdrop-blur-md bg-[#020617]/90 border-b border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
     
-    <!-- Logo -->
     <div class="flex-shrink-0">
-      <a href={`${base}/`} class="flex items-center shrink-0 group">
-        <img 
-          src={`${base}/images/logos/pdas-logo2.png`}
-          alt="PDAS 2026" 
-          class="h-12 md:h-14 w-auto object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.1)] group-hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.4)] transition-all duration-300"
-        />
+      <a href="/" class="flex items-center group">
+        <img src="/images/logos/pdas-logo2.png" alt="PDAS 2026" class="h-10 md:h-12 w-auto object-contain" />
       </a>
     </div>
-
-    <!-- Desktop Nav -->
+    
     <nav class="hidden lg:flex items-center gap-x-2">
       {navLinks.map((link) => (
         <div class="relative group py-2">
-          <a 
-            href={link.href} 
-            class="text-[11px] font-bold tracking-widest text-slate-300 hover:text-white px-3 py-2 rounded-md transition-colors duration-200"
-          >
+          <a href={link.href} class="text-[11px] font-bold tracking-widest text-slate-300 hover:text-white px-3 py-2 transition-colors">
             {link.name} {link.dropdown && <span class="text-[10px] opacity-60 ml-0.5">+</span>}
           </a>
-
+          
           {link.dropdown && (
-            <div class="absolute left-0 top-full pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-50">
-              <div class="w-56 bg-[#0b1329] border border-slate-800 rounded-lg p-2 shadow-xl shadow-black/40">
+            <div class="absolute left-0 top-full pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-[70]">
+              <div class="w-56 bg-[#0b1329] border border-slate-800 rounded-lg p-2 shadow-xl">
                 {link.dropdown.map((subItem) => (
-                  <a 
-                    href={subItem.href}
-                    class="block w-full px-4 py-2.5 text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-md transition-all duration-150"
-                  >
-                    {subItem.name}
-                  </a>
+                  <a href={subItem.href} class="block px-4 py-2.5 text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-md transition-all">{subItem.name}</a>
                 ))}
               </div>
             </div>
@@ -46,132 +46,27 @@ import { navLinks } from '../config/navigation.js';
         </div>
       ))}
     </nav>
-
-    <!-- Desktop CTA Buttons -->
+    
     <div class="hidden lg:flex items-center gap-x-4">
-      <a 
-        href={`${base}/register-visit`}
-        class="text-xs font-bold tracking-wider px-4 py-2.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800 transition-all"
-      >
-        Visit Registration
-      </a>
-      <a 
-        href={`${base}/exhibit-form`}
-        class="text-xs font-bold tracking-wider px-4 py-2.5 rounded-lg bg-gradient-to-r from-blue-700 to-[#008718] text-white shadow-lg shadow-blue-900/30 hover:scale-[1.02] transition-all"
-      >
-        Exhibit Space Select
-      </a>
+      <a href="/visitor-form" class="text-xs font-bold px-4 py-2.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800 transition-all">Visit Registration</a>
+      <a href="/exhibit-form" class="text-xs font-bold px-4 py-2.5 rounded-lg bg-gradient-to-r from-blue-700 to-[#008718] text-white hover:scale-[1.02] transition-all shadow-lg shadow-green-900/20">Exhibit Space Select</a>
     </div>
-
-    <!-- Hamburger Button (mobile only) -->
-    <button 
-      id="menu-toggle"
-      class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-md border border-slate-700 bg-slate-900/60 hover:border-sky-400 transition-all"
-      aria-label="Toggle menu"
-    >
-      <span class="hamburger-bar block w-5 h-0.5 bg-slate-300 transition-all duration-300"></span>
-      <span class="hamburger-bar block w-5 h-0.5 bg-slate-300 transition-all duration-300"></span>
-      <span class="hamburger-bar block w-5 h-0.5 bg-slate-300 transition-all duration-300"></span>
+    
+    <button id="menu-toggle" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 border border-slate-700 bg-slate-900 rounded-md">
+      <span class="hamburger-bar block w-5 h-0.5 bg-slate-300"></span>
+      <span class="hamburger-bar block w-5 h-0.5 bg-slate-300"></span>
+      <span class="hamburger-bar block w-5 h-0.5 bg-slate-300"></span>
     </button>
-
-  </div>
-
-  <!-- Mobile Menu -->
-  <div 
-    id="mobile-menu"
-    class="lg:hidden hidden bg-[#020617] border-t border-slate-800 max-h-[80vh] overflow-y-auto"
-  >
-    <div class="px-4 py-4 space-y-1">
-      {navLinks.map((link) => (
-        <div class="mobile-nav-item">
-          {link.dropdown ? (
-            <div>
-              <button 
-                class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 text-[11px] font-bold tracking-widest text-slate-300 hover:text-white hover:bg-slate-900 rounded-md transition-colors"
-              >
-                {link.name}
-                <svg class="dropdown-arrow w-4 h-4 text-sky-400 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </button>
-              <div class="mobile-dropdown hidden pl-4 mt-1 space-y-1 border-l border-slate-800 ml-4">
-                {link.dropdown.map((subItem) => (
-                  <a 
-                    href={subItem.href}
-                    class="block px-4 py-2.5 text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-md transition-all"
-                  >
-                    {subItem.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <a 
-              href={link.href}
-              class="block px-4 py-3 text-[11px] font-bold tracking-widest text-slate-300 hover:text-white hover:bg-slate-900 rounded-md transition-colors"
-            >
-              {link.name}
-            </a>
-          )}
-        </div>
-      ))}
-
-      <!-- Mobile CTA Buttons -->
-      <div class="pt-4 pb-2 flex flex-col gap-3 border-t border-slate-800 mt-4">
-        <a 
-          href={`${base}/register-visit`}
-          class="text-xs font-bold tracking-wider px-4 py-3 rounded-lg border border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800 transition-all text-center"
-        >
-          Visit Registration
-        </a>
-        <a 
-          href={`${base}/exhibit-form`}
-          class="text-xs font-bold tracking-wider px-4 py-3 rounded-lg bg-gradient-to-r from-blue-700 to-[#008718] text-white text-center"
-        >
-          Exhibit Space Select
-        </a>
-      </div>
-    </div>
+    
   </div>
 </header>
 
 <script>
+  // Cleaned up! Only the mobile menu logic remains.
   const toggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const bars = document.querySelectorAll('.hamburger-bar');
-
-  // Toggle mobile menu open/close
+  
   toggle?.addEventListener('click', () => {
-    const isOpen = !mobileMenu?.classList.contains('hidden');
-    mobileMenu?.classList.toggle('hidden', isOpen);
-
-    // Animate hamburger to X
-    if (!isOpen) {
-      bars[0]?.classList.add('rotate-45', 'translate-y-2');
-      bars[1]?.classList.add('opacity-0');
-      bars[2]?.classList.add('-rotate-45', '-translate-y-2');
-    } else {
-      bars[0]?.classList.remove('rotate-45', 'translate-y-2');
-      bars[1]?.classList.remove('opacity-0');
-      bars[2]?.classList.remove('-rotate-45', '-translate-y-2');
-    }
-  });
-
-  // Toggle dropdowns inside mobile menu
-  document.querySelectorAll('.mobile-dropdown-toggle').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const dropdown = btn.nextElementSibling;
-      const arrow = btn.querySelector('.dropdown-arrow');
-      dropdown?.classList.toggle('hidden');
-      arrow?.classList.toggle('rotate-180');
-    });
-  });
-
-  // Close menu when a link is clicked
-  document.querySelectorAll('#mobile-menu a').forEach((link) => {
-    link.addEventListener('click', () => {
-      mobileMenu?.classList.add('hidden');
-      bars[0]?.classList.remove('rotate-45', 'translate-y-2');
-      bars[1]?.classList.remove('opacity-0');
-      bars[2]?.classList.remove('-rotate-45', '-translate-y-2');
-    });
+    const menu = document.getElementById('mobile-menu');
+    menu?.classList.toggle('hidden');
   });
 </script>
